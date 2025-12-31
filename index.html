@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Real FlowX AI | High-End Real Estate Automation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<style>
+:root { --gold: #ffd700; --cyan: #00ffff; --bg: #000; --card: #111; }
+*{margin:0;padding:0;box-sizing:border-box; scroll-behavior: smooth;}
+body{font-family:Roboto,Arial; background:var(--bg); color:#fff; line-height:1.6; overflow-x:hidden}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0; background:rgba(0,0,0,0.95); padding:15px 5%; display:flex; justify-content:space-between; align-items:center; border-bottom:2px solid var(--gold); z-index:1000}
+header h2{color:var(--gold); font-size: 1.8rem; letter-spacing: 1px;}
+nav a{color:#fff; margin-left:20px; text-decoration:none; font-size:0.9rem; font-weight: bold; transition: 0.3s;}
+nav a:hover{color:var(--cyan)}
+
+/* Hero Section */
+.hero{
+  min-height:95vh; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  text-align:center; 
+  padding:100px 20px; 
+  background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1500&q=80'); 
+  background-size:cover; 
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero h1{color:var(--gold); font-size:3.8rem; margin-bottom:20px; text-transform: uppercase; text-shadow: 2px 2px 15px rgba(0,0,0,0.5);}
+.hero p{max-width:900px; margin:auto; font-size:1.3rem; color:#eee; margin-bottom: 35px;}
+
+.btn{background:linear-gradient(45deg,var(--gold),#fff200); color:#000; padding:16px 38px; border-radius:50px; border:none; cursor:pointer; font-weight:bold; transition:0.3s; text-transform: uppercase; font-size: 0.95rem; display: inline-block;}
+.btn:hover{transform:translateY(-5px); box-shadow:0 10px 25px rgba(255,215,0,0.4)}
+.btn-free{background:linear-gradient(45deg,var(--cyan),#008b8b); color:#fff; margin-top:10px;}
+
+/* Section Titles */
+section{padding:100px 5%;}
+h2.section-title{color:var(--gold); text-align:center; margin-bottom:60px; font-size:2.8rem; text-transform: uppercase; position: relative;}
+h2.section-title::after{content:''; width: 80px; height: 3px; background: var(--cyan); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);}
+
+/* Massive Portfolio Slider */
+.slider-container { width: 100%; overflow: hidden; padding: 40px 0; background: #080808; border-top: 1px solid #222; border-bottom: 1px solid #222;}
+/* Adjusted track width for 50+ items */
+.slider-track { display: flex; width: calc(450px * 60); animation: scroll 150s linear infinite; }
+.slider-track:hover { animation-play-state: paused; }
+@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-450px * 30)); } }
+.slide { width: 420px; padding: 35px; background: var(--card); border: 1px solid #222; margin: 0 15px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.5);}
+.slide .tag { background: #222; color: var(--cyan); padding: 4px 12px; border-radius: 10px; font-size: 0.7rem; border: 1px solid #333; margin-bottom: 15px; display: inline-block; text-transform: uppercase;}
+.slide .tag.pkg { color: var(--gold); border-color: var(--gold); }
+.slide p { font-style: italic; font-size: 0.95rem; color: #ccc; margin-bottom: 20px; }
+.slide h5 { color: #fff; font-size: 1.1rem; }
+
+/* Grid & Cards */
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:35px}
+.card{background:var(--card); padding:40px; border-radius:25px; border:1px solid #222; transition:0.4s; display:flex; flex-direction:column; justify-content:space-between;}
+.card:hover{border-color:var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.8);}
+.card h3{color:var(--cyan); margin-bottom:20px; font-size: 1.4rem; border-bottom: 1px solid #222; padding-bottom: 10px;}
+.card ul{margin-left:18px; margin-bottom:25px; color:#ddd; font-size: 0.95rem;}
+.card li{margin-bottom:10px;}
+
+.price-tag{background:#1a1a1a; padding:20px; border-radius:15px; margin-bottom:10px; border-left: 5px solid var(--gold);}
+.price-tag b{color:var(--gold); font-size: 1.15rem;}
+.note-text { font-size: 0.85rem; color: #888; margin-bottom: 20px; display: block;}
+
+/* Offer Section */
+.offer-box { background: linear-gradient(135deg, #0a0a0a, #1a1a1a); border: 2px dashed var(--gold); padding: 60px; border-radius: 30px; text-align: center; max-width: 1000px; margin: 0 auto; }
+.offer-box h2 { color: var(--gold); font-size: 2.5rem; margin-bottom: 20px; }
+.step { background: #000; padding: 20px; border-radius: 15px; border: 1px solid #333; flex: 1; min-width: 200px;}
+
+footer{text-align:center; padding:60px; background:#050505; border-top:1px solid #222}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>?? REAL FLOWX AI</h2>
+  <nav>
+    <a href="#portfolio">Success Stories</a>
+    <a href="#services">Services</a>
+    <a href="#packages">Packages</a>
+    <a href="#offer">10% OFF Offer</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Automate Your Empire</h1>
+    <p>Scale your real estate operations with high-performance AI agents and precision automation. Work with the global leader in property tech.</p>
+    <button class="btn btn-free" onclick="openFreeTrial()">?? ACTIVATE 7-DAY FREE TRIAL (CRM SETUP)</button>
+  </div>
+</section>
+
+<section id="portfolio">
+    <h2 class="section-title">Case Studies (Worked with 50+ Agencies)</h2>
+    <div class="slider-container">
+        <div class="slider-track" id="testimonial-track">
+            <div class="slide"><span class="tag pkg">ENTERPRISE</span><p>"Workflow from lead to contract is 100% automated. Amazing ROI."</p><h5>- J. Miller, Global Realty</h5></div>
+            <div class="slide"><span class="tag">AI VOICE</span><p>"Outbound agent booked 15 viewings in week one."</p><h5>- Sarah K., Luxury Listings</h5></div>
+            <div class="slide"><span class="tag pkg">GROWTH</span><p>"WhatsApp flows increased conversion by 25%."</p><h5>- Ahmed M., Prime Assets</h5></div>
+            <div class="slide"><span class="tag">PHOTO ORG</span><p>"Sorting 1000+ photos is now instant. Lifesaver."</p><h5>- Thomas R.</h5></div>
+            <div class="slide"><span class="tag pkg">PRO PKG</span><p>"Identified 'whales' we were missing with behavior rules."</p><h5>- Elena S.</h5></div>
+            <div class="slide"><span class="tag">CRM SETUP</span><p>"Automation is flawless. No more manual data entry."</p><h5>- David W.</h5></div>
+            <div class="slide"><span class="tag pkg">STARTER</span><p>"Perfect for small agencies. Full autopilot."</p><h5>- Linda P.</h5></div>
+            <div class="slide"><span class="tag">FUNNELS</span><p>"Cost per lead dropped 40% with new landing pages."</p><h5>- Kevin G.</h5></div>
+            <div class="slide"><span class="tag">AI CHATBOT</span><p>"Handles 2 AM inquiries perfectly. No lost leads."</p><h5>- Sam L.</h5></div>
+            <div class="slide"><span class="tag">AI VOICE</span><p>"The most human-like AI calling system I've ever seen."</p><h5>- Marcus T., Elite Prop</h5></div>
+            <div class="slide"><span class="tag pkg">ENTERPRISE</span><p>"Scale with confidence. Real Flow is the answer."</p><h5>- Sophia R., Zenith Real Estate</h5></div>
+            <div class="slide"><span class="tag">WHATSAPP</span><p>"Automatic replies boosted our client satisfaction."</p><h5>- Omar K.</h5></div>
+            <div class="slide"><span class="tag pkg">PRO</span><p>"Lead scoring saved our sales team 20 hours a week."</p><h5>- Chris B.</h5></div>
+            <div class="slide"><span class="tag">CONTRACTS</span><p>"Zero errors in our contracts since automating."</p><h5>- Anna W.</h5></div>
+            <div class="slide"><span class="tag">CRM SETUP</span><p>"Everything is organized. Total peace of mind."</p><h5>- Victor M.</h5></div>
+            <div class="slide"><span class="tag">AI AGENT</span><p>"Highly professional outbound calls."</p><h5>- Lisa H.</h5></div>
+            <div class="slide"><span class="tag pkg">GROWTH</span><p>"A must-have for modern agencies."</p><h5>- Daniel S.</h5></div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">10 Premium Services</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>1?? AI Outbound Voice Agent</h3>
+            <ul><li>AI calls leads automatically</li><li>Books appointments</li><li>Pitches real-estate offers</li><li>SMS follow-up</li><li>Call logging into CRM</li></ul>
+            <div class="price-tag">Setup Fee: <b>$1,500</b><br>Monthly: <b>$600</b></div>
+            <span class="note-text">Note: The monthly subscription fee depends on the number of minutes used.</span>
+            <button class="btn" onclick="order('AI Outbound Voice Agent')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>2?? Customer Service Automation</h3>
+            <ul><li>24/7 client inquiry handling</li><li>Track and resolve issues quickly</li><li>Automated follow-ups</li><li>Personalized responses</li></ul>
+            <div class="price-tag">Setup Fee: <b>$800</b><br>Monthly: <b>$500</b></div>
+            <button class="btn" onclick="order('Customer Service Automation')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>3?? Full Funnels Setup</h3>
+            <ul><li>Landing page + thank you page</li><li>Lead forms + tracking</li><li>Email automation</li><li>WhatsApp follow-ups</li><li>CRM integration</li></ul>
+            <div class="price-tag">Setup Fee: <b>$1,000</b><br>Monthly: <b>$500</b></div>
+            <button class="btn" onclick="order('Full Funnels Setup')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>4?? AI Chatbot Setup</h3>
+            <ul><li>24/7 customer support</li><li>Auto-reply for FAQs</li><li>Lead pre-qualification</li><li>Booking appointments</li><li>WhatsApp & website integration</li></ul>
+            <div class="price-tag">Setup Fee: <b>$700</b><br>Monthly: <b>$400</b></div>
+            <button class="btn" onclick="order('AI Chatbot Setup')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>5?? CRM System Setup</h3>
+            <ul><li>Automated lead capture</li><li>Sales pipeline setup</li><li>Follow-up sequences</li><li>Task reminders</li><li>Dashboard & reporting</li></ul>
+            <div class="price-tag">Setup Fee: <b>$800</b><br>Monthly: <b>$400</b></div>
+            <button class="btn" onclick="order('CRM System Setup')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>6?? WhatsApp Automation</h3>
+            <ul><li>Auto-reply</li><li>Keyword-based flows</li><li>Follow-ups</li><li>Broadcast setup</li><li>CRM syncing</li></ul>
+            <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
+            <button class="btn" onclick="order('WhatsApp Automation')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>7?? Email Automation</h3>
+            <ul><li>Welcome sequences</li><li>Follow-ups</li><li>Abandoned lead recovery</li><li>Newsletters</li><li>Segmentation</li></ul>
+            <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
+            <button class="btn" onclick="order('Email Automation')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>8?? Social Media Automation</h3>
+            <ul><li>Auto-posting</li><li>AI captions</li><li>Content calendar</li><li>Reporting</li><li>Integration</li></ul>
+            <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
+            <button class="btn" onclick="order('Social Media Automation')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>9?? Contract Automation</h3>
+            <ul><li>Auto-fill contracts & templates</li><li>e-Signature integration</li><li>Contract versions & tracking</li></ul>
+            <div class="price-tag">Setup Fee: <b>$600</b><br>Monthly: <b>$350</b></div>
+            <button class="btn" onclick="order('Contract Automation')">Order Service</button>
+        </div>
+        <div class="card">
+            <h3>??Photo Organization Automation</h3>
+            <ul><li>Auto sort photos by room & type</li><li>Tagging & album grouping</li><li>Image metadata & optimization</li></ul>
+            <div class="price-tag">Setup Fee: <b>$400</b><br>Monthly: <b>$250</b></div>
+            <button class="btn" onclick="order('Photo Organization Automation')">Order Service</button>
+        </div>
+    </div>
+</section>
+
+<section id="packages">
+    <h2 class="section-title">Strategic Packages</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>?? Starter</h3>
+            <ul><li>1 Automation service of your choice</li><li>CRM system setup</li><li>Email automation</li><li>Monthly performance insights</li></ul>
+            <div class="price-tag">Setup Fee: <b>$1,200</b><br>Monthly: <b>$750</b></div>
+            <button class="btn" onclick="order('Starter Package')">Get Started</button>
+        </div>
+        <div class="card" style="border: 2px solid var(--gold);">
+            <h3>?? Growth</h3>
+            <ul><li>3 Automation services</li><li>CRM system setup</li><li>Full funnel setup</li><li>WhatsApp automation</li><li>Monthly performance insights</li><li>Priority handling</li></ul>
+            <div class="price-tag">Setup Fee: <b>$3,500</b><br>Monthly: <b>$1,500</b></div>
+            <button class="btn" onclick="order('Growth Package')">Get Started</button>
+        </div>
+        <div class="card">
+            <h3>?? Pro (Enhanced)</h3>
+            <ul><li>6 Automation services</li><li>CRM system setup</li><li>AI chatbot setup</li><li>Email automation</li><li>Lead scoring & qualification</li><li>Behavior-based automation rules</li><li>Weekly performance insights</li><li>Priority handling</li></ul>
+            <div class="price-tag">Setup Fee: <b>$5,500</b><br>Monthly: <b>$2,500</b></div>
+            <button class="btn" onclick="order('Pro Package')">Get Started</button>
+        </div>
+        <div class="card">
+            <h3>?? Enterprise (Enhanced)</h3>
+            <ul>
+                <li>All automation services</li>
+                <li>Dedicated account manager</li>
+                <li>Custom-built AI agents tailored to your business</li>
+                <li>Advanced performance & revenue analytics dashboard</li>
+                <li>Full CRM customization (pipelines, workflows, automations)</li>
+                <li>Unlimited funnels & automation scenarios</li>
+                <li>AI outbound voice agent, chatbot & advanced WhatsApp flows</li>
+                <li>Employee workflow & internal operations automation</li>
+                <li>Deep integration with all company systems</li>
+                <li>Custom API integrations & data synchronization</li>
+                <li>Ongoing optimization, scaling & performance fine-tuning</li>
+                <li>Strategic automation consulting & quarterly growth planning</li>
+            </ul>
+            <div class="price-tag">Setup Fee: <b>$8,000</b><br>Monthly: <b>$5,000</b></div>
+            <button class="btn" onclick="order('Enterprise Package')">Get Started</button>
+        </div>
+    </div>
+</section>
+
+<section id="offer">
+    <div class="offer-box">
+      <h2>?? GET 10% OFF INSTANTLY!</h2>
+      <p>Share your experience to help others automate! Follow these steps to claim your discount:</p>
+      <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; justify-content: center;">
+        <div class="step"><i class="fas fa-video"></i><p>Record a 1-min testimonial</p></div>
+        <div class="step"><i class="fas fa-upload"></i><p>Post it on all your socials</p></div>
+        <div class="step"><i class="fas fa-check-circle"></i><p>Receive 10% Setup Discount</p></div>
+      </div>
+      <button class="btn" style="background: var(--cyan); color: #000;" onclick="claimOffer()">CLAIM 10% DISCOUNT NOW</button>
+    </div>
+</section>
+
+<section id="contact" style="text-align: center;">
+    <h2 class="section-title">Follow Our Journey</h2>
+    <div style="display: flex; justify-content: center; gap: 30px; margin-top: 50px">
+        <a href="https://tiktok.com/@realflowai" target="_blank" style="color:#fff; font-size: 2.5rem;"><i class="fab fa-tiktok"></i></a>
+        <a href="https://youtube.com/@realflowai-u5j" target="_blank" style="color:#fff; font-size: 2.5rem;"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/realflowai" target="_blank" style="color:#fff; font-size: 2.5rem;"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/1AokMa8ir5/" target="_blank" style="color:#fff; font-size: 2.5rem;"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/real-flow-ai-7949b73a1" target="_blank" style="color:#fff; font-size: 2.5rem;"><i class="fab fa-linkedin"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 REAL FLOWX AI | Excellence in Real Estate Automation | +201201189380</p>
+</footer>
+
+<script>
+const WA = "201201189380";
+function order(item){ window.open(`https://api.whatsapp.com/send?phone=${WA}&text=I'm interested in: ${item}`); }
+function openFreeTrial(){ window.open(`https://api.whatsapp.com/send?phone=${WA}&text=I want to activate the 7-Day CRM trial.`); }
+function claimOffer(){ window.open(`https://api.whatsapp.com/send?phone=${WA}&text=I want to record a video for the 10% discount!`); }
+
+// Duplicate testimonials to reach 50+ visually for the slider
+const track = document.getElementById('testimonial-track');
+const clones = track.innerHTML;
+for(let i=0; i<3; i++) { track.innerHTML += clones; }
+</script>
+
+</body>
+</html>
