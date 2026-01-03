@@ -47,6 +47,19 @@ section{padding:100px 5%;}
 h2.section-title{color:var(--gold); text-align:center; margin-bottom:60px; font-size:2.8rem; text-transform: uppercase; position: relative;}
 h2.section-title::after{content:''; width: 80px; height: 3px; background: var(--cyan); position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);}
 
+.tier-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tier-a { background: rgba(255, 215, 0, 0.2); color: var(--gold); border: 1px solid var(--gold); }
+.tier-b { background: rgba(0, 255, 255, 0.1); color: var(--cyan); border: 1px solid var(--cyan); }
+
 .slider-container { width: 100%; overflow: hidden; padding: 40px 0; background: #080808; border-top: 1px solid #222; border-bottom: 1px solid #222;}
 .slider-track { display: flex; width: calc(450px * 60); animation: scroll 150s linear infinite; }
 .slider-track:hover { animation-play-state: paused; }
@@ -58,9 +71,9 @@ h2.section-title::after{content:''; width: 80px; height: 3px; background: var(--
 .slide h5 { color: #fff; font-size: 1.1rem; }
 
 .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(340px,1fr)); gap:35px}
-.card{background:var(--card); padding:40px; border-radius:25px; border:1px solid #222; transition:0.4s; display:flex; flex-direction:column; justify-content:space-between;}
+.card{background:var(--card); padding:40px; border-radius:25px; border:1px solid #222; transition:0.4s; display:flex; flex-direction:column; justify-content:space-between; position: relative;}
 .card:hover{border-color:var(--gold); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.8);}
-.card h3{color:var(--cyan); margin-bottom:20px; font-size: 1.4rem; border-bottom: 1px solid #222; padding-bottom: 10px;}
+.card h3{color:#fff; margin-bottom:20px; font-size: 1.4rem; border-bottom: 1px solid #222; padding-bottom: 10px;}
 .card ul{margin-left:5px; margin-bottom:25px; color:#ddd; font-size: 0.95rem; list-style: none;}
 .card li{margin-bottom:10px; display: flex; align-items: flex-start;}
 .card li::before { content: "\f00c"; font-family: "Font Awesome 5 Free"; font-weight: 900; color: var(--gold); margin-right: 10px; font-size: 0.8rem; margin-top: 5px;}
@@ -113,6 +126,7 @@ footer{text-align:center; padding:60px; background:#050505; border-top:1px solid
     <h2 class="section-title">10 Premium Services</h2>
     <div class="grid">
         <div class="card">
+            <span class="tier-badge tier-a">Tier A - Premium</span>
             <h3>AI Outbound Voice Agent</h3>
             <ul><li>AI calls leads automatically</li><li>Books appointments</li><li>Pitches real-estate offers</li><li>SMS follow-up</li><li>Call logging into CRM</li></ul>
             <div class="price-tag">Setup Fee: <b>$1,500</b><br>Monthly: <b>$600</b></div>
@@ -120,54 +134,64 @@ footer{text-align:center; padding:60px; background:#050505; border-top:1px solid
             <button class="btn" onclick="order('AI Outbound Voice Agent')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-a">Tier A - Premium</span>
             <h3>Customer Service Automation</h3>
             <ul><li>24/7 client inquiry handling</li><li>Track and resolve issues quickly</li><li>Automated follow-ups</li><li>Personalized responses</li></ul>
             <div class="price-tag">Setup Fee: <b>$800</b><br>Monthly: <b>$500</b></div>
             <button class="btn" onclick="order('Customer Service Automation')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-a">Tier A - Premium</span>
             <h3>Full Funnels Setup</h3>
             <ul><li>Landing page and thank you page</li><li>Lead forms and tracking</li><li>Email automation</li><li>WhatsApp follow-ups</li><li>CRM integration</li></ul>
             <div class="price-tag">Setup Fee: <b>$1,000</b><br>Monthly: <b>$500</b></div>
             <button class="btn" onclick="order('Full Funnels Setup')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-a">Tier A - Premium</span>
             <h3>AI Chatbot Setup</h3>
             <ul><li>24/7 customer support</li><li>Auto-reply for FAQs</li><li>Lead pre-qualification</li><li>Booking appointments</li><li>WhatsApp and website integration</li></ul>
             <div class="price-tag">Setup Fee: <b>$700</b><br>Monthly: <b>$400</b></div>
             <button class="btn" onclick="order('AI Chatbot Setup')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-a">Tier A - Premium</span>
             <h3>CRM System Setup</h3>
             <ul><li>Automated lead capture</li><li>Sales pipeline setup</li><li>Follow-up sequences</li><li>Task reminders</li><li>Dashboard and reporting</li></ul>
             <div class="price-tag">Setup Fee: <b>$800</b><br>Monthly: <b>$400</b></div>
             <button class="btn" onclick="order('CRM System Setup')">Order Service</button>
         </div>
+
         <div class="card">
+            <span class="tier-badge tier-b">Tier B - Essential</span>
             <h3>WhatsApp Automation</h3>
             <ul><li>Auto-reply</li><li>Keyword-based flows</li><li>Follow-ups</li><li>Broadcast setup</li><li>CRM syncing</li></ul>
             <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
             <button class="btn" onclick="order('WhatsApp Automation')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-b">Tier B - Essential</span>
             <h3>Email Automation</h3>
             <ul><li>Welcome sequences</li><li>Follow-ups</li><li>Abandoned lead recovery</li><li>Newsletters</li><li>Segmentation</li></ul>
             <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
             <button class="btn" onclick="order('Email Automation')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-b">Tier B - Essential</span>
             <h3>Social Media Automation</h3>
             <ul><li>Auto-posting</li><li>AI captions</li><li>Content calendar</li><li>Reporting</li><li>Integration</li></ul>
             <div class="price-tag">Setup Fee: <b>$500</b><br>Monthly: <b>$300</b></div>
             <button class="btn" onclick="order('Social Media Automation')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-b">Tier B - Essential</span>
             <h3>Contract Automation</h3>
             <ul><li>Auto-fill contracts and templates</li><li>e-Signature integration</li><li>Contract versions and tracking</li></ul>
             <div class="price-tag">Setup Fee: <b>$600</b><br>Monthly: <b>$350</b></div>
             <button class="btn" onclick="order('Contract Automation')">Order Service</button>
         </div>
         <div class="card">
+            <span class="tier-badge tier-b">Tier B - Essential</span>
             <h3>Photo Organization Automation</h3>
             <ul><li>Auto sort photos by room and type</li><li>Tagging and album grouping</li><li>Image metadata and optimization</li></ul>
             <div class="price-tag">Setup Fee: <b>$400</b><br>Monthly: <b>$250</b></div>
@@ -182,7 +206,7 @@ footer{text-align:center; padding:60px; background:#050505; border-top:1px solid
         <div class="card">
             <h3>Starter</h3>
             <ul>
-                <li>Choose any 2 Automation Services from Tier B</li>
+                <li>Choose any 2 Automation Services from <b>Tier B</b></li>
                 <li>Monthly Performance Insights (Standard)</li>
                 <li>Standard Email Support</li>
             </ul>
